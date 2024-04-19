@@ -5,6 +5,9 @@ This repo contains train files of ABINet model on 94 characters. The pretrained 
 Following are the model configaration:
 - Trained on ST and MJ with 94 characters containing lower, upper and sepcial characters. 
 - Maximum length of the label is 35
+- The language model is trained for special chacters as well
+- The dataset for Language Model can be found here :
+- This dataset is a modified version of WikiText with 2M added words with special characters. It contains 50% Lowercase, 35% Capitalized and 15% Uppercase.
 - Change the paths in train_abinet_custom.yaml for retraining 
 - Link : [Checkpoint for Vision, Language and Alignment model](https://drive.google.com/drive/u/1/folders/1Yv2bzkm72Vl6vHawBxbZ0lYjbin7kZ5d)
 
