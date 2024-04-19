@@ -6,7 +6,7 @@ Following are the model configaration:
 - Trained on ST and MJ with 94 characters containing lower, upper and sepcial characters. 
 - Maximum length of the label is 35
 - Change the paths in train_abinet_custom.yaml for retraining 
-- Link : [Checkpoint for Vision, Language and Alignment model]([https://drive.google.com/drive/u/1/folders/1fLmZyoGw9O_dXh0NxwcsaqU1_dvuD-ge](https://drive.google.com/drive/u/1/folders/1Yv2bzkm72Vl6vHawBxbZ0lYjbin7kZ5d))
+- Link : [Checkpoint for Vision, Language and Alignment model](https://drive.google.com/drive/u/1/folders/1Yv2bzkm72Vl6vHawBxbZ0lYjbin7kZ5d)
 
 
 ABINet uses a vision model and an explicit language model to recognize text in the wild, which are trained in end-to-end way. The language model (BCN) achieves bidirectional language representation in simulating cloze test, additionally utilizing iterative correction strategy.
