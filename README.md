@@ -1,6 +1,13 @@
 # Read Like Humans: Autonomous, Bidirectional and Iterative Language Modeling for Scene Text Recognition
 
-The official code of [ABINet](https://arxiv.org/pdf/2103.06495.pdf) (CVPR 2021, Oral).
+This repo contains train files of ABINet model on 94 characters. The pretrained and finetuned model weights are provided below. 
+
+Following are the model configaration:
+- Trained on ST and MJ with 94 characters containing lower, upper and sepcial characters. 
+- Maximum length of the label is 35
+- Change the paths in train_abinet_custom.yaml for retraining 
+- Link : [Checkpoint for Vision, Language and Alignment model]([https://drive.google.com/drive/u/1/folders/1fLmZyoGw9O_dXh0NxwcsaqU1_dvuD-ge](https://drive.google.com/drive/u/1/folders/1Yv2bzkm72Vl6vHawBxbZ0lYjbin7kZ5d))
+
 
 ABINet uses a vision model and an explicit language model to recognize text in the wild, which are trained in end-to-end way. The language model (BCN) achieves bidirectional language representation in simulating cloze test, additionally utilizing iterative correction strategy.
 
