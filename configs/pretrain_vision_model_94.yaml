@@ -1,0 +1,63 @@
+global:
+  name: pretrain-vision-model-custom-2
+  phase: train
+  stage: pretrain-vision
+  workdir: workdir
+  seed: ~
+ 
+dataset:
+  train: {
+    roots: ['data/training/MJ/train/', 
+            'data/training/MJ/test/', 
+            'data/training/MJ/val/', 
+            'data/training/ST'],
+    batch_size: 800
+  }
+  test: {
+    roots: ['data/test/IIIT5k', 
+            'data/test/SVT', 
+            'data/test/SVTP',
+            'data/test/IC13_857',
+            'data/test/IC15_1811',
+            'data/test/CUTE80'
+            ],
+    batch_size: 800
+  }
+  charset_path: data/charset_94.txt
+  data_aug: True
+  case_sensitive: True
+  eval_case_sensitive: True
+  multiscales: False
+  num_workers: 50
+  max_length: 35
+
+training:
+  epochs: 8
+  show_iters: 50
+  eval_iters: 3000
+  save_iters: 3000
+
+optimizer:
+  type: Adam
+  true_wd: False
+  wd: 0.0
+  bn_wd: False
+  clip_grad: 20
+  lr: 0.0001
+  args: {
+    betas: !!python/tuple [0.9, 0.999], # for default Adam 
+  }
+  scheduler: {
+    periods: [6, 2],
+    gamma: 0.1,
+  }
+
+model:
+  name: 'modules.model_vision.BaseVision'
+  checkpoint: ~
+  vision: {
+    loss_weight: 1.,
+    attention: 'position',
+    backbone: 'transformer',
+    backbone_ln: 3,
+  }
